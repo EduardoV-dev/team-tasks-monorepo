@@ -1,13 +1,11 @@
 {
-    "name": "utils",
+    "name": "@team-tasks/utils",
     "version": "1.0.0",
-    "description": "",
-    "main": "index.ts",
+    "description": "Series of utility functions for Team Tasks application",
+    "main": "src/index.ts",
+    "types": "src/index.ts",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "exports": {
-        ".": "./src/index.ts"
     },
     "keywords": [],
     "author": "",

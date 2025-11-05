@@ -1,5 +1,6 @@
 import process from "node:process";
 import js from "@eslint/js";
+import globals from "globals";
 import tseslint from "@typescript-eslint/eslint-plugin";
 import tsparser from "@typescript-eslint/parser";
 import prettier from "eslint-config-prettier";
@@ -12,14 +13,14 @@ export default [
         files: ["**/*.ts", "**/*.mjs", "**/*.js"],
         languageOptions: {
             parser: tsparser,
+            sourceType: "module",
             parserOptions: {
-                project: "./tsconfig.json",
+                project: true,
                 tsconfigRootDir: process.cwd(),
-                sourceType: "module",
             },
-            env: {
-                node: true,
-                es2022: true,
+            globals: {
+                ...globals.node,
+                ...globals.es2022,
             },
         },
         plugins: {
@@ -29,7 +30,6 @@ export default [
         },
         rules: {
             ...tseslint.configs.recommended.rules,
-            ...prettier.rules,
             "prettier/prettier": ["error"],
             "import/order": [
                 "error",
@@ -67,6 +67,8 @@ export default [
             ],
         },
     },
+    // Disable rules that would conflict with Prettier
+    prettier,
     {
         ignores: ["dist", "node_modules"],
     },

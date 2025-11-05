@@ -1,0 +1,24 @@
+{
+    "name": "team",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "packageManager": "pnpm@10.15.0",
+    "dependencies": {
+        "@team-tasks": "workspace:^"
+    },
+    "devDependencies": {
+        "@types/aws-lambda": "^8.10.156",
+        "@types/node": "^24.9.1",
+        "@types/serverless": "^3.12.27",
+        "nodemon": "^3.1.10",
+        "serverless-offline": "^14.4.0",
+        "ts-node": "^10.9.2"
+    }
+}

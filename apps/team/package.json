@@ -2,16 +2,18 @@
     "name": "team",
     "version": "1.0.0",
     "description": "",
-    "main": "index.js",
+    "main": "src/functions/**/*.ts",
+    "type": "module",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "dev": "nodemon --watch . --ext ts --exec sls offline"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "packageManager": "pnpm@10.15.0",
     "dependencies": {
-        "@team-tasks/utils": "workspace:^"
+        "@team-tasks/utils": "workspace:^",
+        "dotenv": "^17.2.3"
     },
     "devDependencies": {
         "@types/aws-lambda": "^8.10.156",

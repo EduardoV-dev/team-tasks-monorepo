@@ -10,5 +10,11 @@
     "keywords": [],
     "author": "",
     "license": "ISC",
-    "packageManager": "pnpm@10.15.0"
+    "packageManager": "pnpm@10.15.0",
+    "devDependencies": {
+        "@types/serverless": "^3.12.27"
+    },
+    "dependencies": {
+        "glob": "^11.0.3"
+    }
 }

@@ -1,4 +1,5 @@
 {
+    "extends": "./tsconfig.paths.json",
     "compilerOptions": {
         "composite": true,
         "declaration": true,
@@ -23,10 +24,8 @@
         "skipLibCheck": true,
         "sourceMap": true,
         "strict": true,
-        "target": "ES2022",
-        "baseUrl": ".",
-        "paths": {
-            "@team-tasks/utils": ["packages/utils/src/index.ts"]
-        }
-    }
+        "target": "ES2022"
+    },
+    "include": ["apps/**/*", "packages/**/*"],
+    "exclude": ["node_modules", "dist", ".serverless", "eslint.config.js", "lint-staged.config.js"]
 }

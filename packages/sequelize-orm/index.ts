@@ -1,3 +1,3 @@
 export const hello = () => {
-    console.log("hello world");
+    return "Hello from sequelize-orm package!";
 };

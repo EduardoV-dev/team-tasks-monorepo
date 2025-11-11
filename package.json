@@ -6,11 +6,12 @@
     "type": "module",
     "scripts": {
         "build:check": "tsc --noEmit",
-        "format": "prettier --write **/*.{js,mjs,ts,json,yaml}",
         "format:check": "prettier --check **/*.{js,mjs,ts,json,yaml}",
-        "lint": "eslint **/*.{js,mjs,ts} --fix",
+        "format": "prettier --write **/*.{js,mjs,ts,json,yaml}",
         "lint:check": "eslint **/*.{js,mjs,ts}",
-        "prepare": "node .husky/install.mjs"
+        "lint": "eslint **/*.{js,mjs,ts} --fix",
+        "prepare": "node .husky/install.mjs",
+        "start:team": "cd apps/team && pnpm dev"
     },
     "keywords": [],
     "author": "Eduardo Varela",
@@ -27,6 +28,7 @@
         "eslint-config-prettier": "^10.1.8",
         "eslint-plugin-import": "^2.32.0",
         "eslint-plugin-prettier": "^5.5.4",
+        "globals": "^16.5.0",
         "husky": "^9.1.7",
         "lint-staged": "^16.1.6",
         "prettier": "^3.6.2",

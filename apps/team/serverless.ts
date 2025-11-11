@@ -1,24 +1,14 @@
-import type { Serverless, Functions } from "serverless/aws";
+import "dotenv/config";
 
-const configuration: Serverless = {
-    service: "team-app",
-    frameworkVersion: "4",
-    provider: {
-        httpApi: {
-            cors: true,
-        },
-        name: "aws",
-        region: "us-east-1",
-        runtime: "nodejs22.x",
-        stage: "${opt:stage, 'dev'}",
-    },
-    custom: {
-        "serverless-offline": {
-            httpPort: "7000",
-        },
-    },
-    functions: {} as Functions,
-    plugins: ["serverless-offline"],
-};
+import { getServerlessConfig } from "@team-tasks/utils";
+import { Serverless } from "serverless/aws.js";
+
+const configuration = getServerlessConfig({
+    directory: __dirname,
+    serviceName: "team-tasks-team-service",
+    httpPort: "7000",
+    apiPrefix: "/teams",
+    env: process.env,
+}).then((config) => config as Serverless);
 
 export default configuration;

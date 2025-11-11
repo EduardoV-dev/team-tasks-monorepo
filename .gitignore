@@ -3,6 +3,5 @@ dist/
 logs/
 .serverless/
 
-pnpm-lock.yaml
 .env
 .env.*

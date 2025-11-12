@@ -20,6 +20,7 @@
         "@types/node": "^24.9.1",
         "@types/serverless": "^3.12.27",
         "nodemon": "^3.1.10",
+        "serverless": "^4.23.0",
         "serverless-offline": "^14.4.0"
     }
 }

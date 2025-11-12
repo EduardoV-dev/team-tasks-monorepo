@@ -2,8 +2,12 @@
     "name": "@team-tasks/utils",
     "version": "1.0.0",
     "description": "Series of utility functions for Team Tasks application",
-    "main": "src/index.ts",
-    "types": "src/index.ts",
+    "type": "module",
+    "main": "./src/index.ts",
+    "types": "./src/index.ts",
+    "exports": {
+        ".": "./src/index.ts"
+    },
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
     },
@@ -12,6 +16,7 @@
     "license": "ISC",
     "packageManager": "pnpm@10.15.0",
     "devDependencies": {
+        "@types/aws-lambda": "^8.10.157",
         "@types/serverless": "^3.12.27"
     },
     "dependencies": {

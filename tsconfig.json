@@ -8,9 +8,9 @@
         "esModuleInterop": true,
         "forceConsistentCasingInFileNames": true,
         "isolatedModules": true,
-        "module": "NodeNext",
+        "module": "ESNext",
         "moduleDetection": "force",
-        "moduleResolution": "NodeNext",
+        "moduleResolution": "Bundler",
         "noFallthroughCasesInSwitch": true,
         "noImplicitAny": true,
         "noImplicitReturns": true,
@@ -24,7 +24,9 @@
         "skipLibCheck": true,
         "sourceMap": true,
         "strict": true,
-        "target": "ES2022"
+        "target": "ES2022",
+        "allowImportingTsExtensions": true,
+        "noEmit": true
     },
     "include": ["apps/**/*", "packages/**/*"],
     "exclude": ["node_modules", "dist", ".serverless", "eslint.config.js", "lint-staged.config.js"]

@@ -1,16 +1,12 @@
+import { APIResponse, HTTP_STATUS } from "@team-tasks/utils";
+
 import type { APIGatewayProxyResultV2, APIGatewayProxyEventV2 } from "aws-lambda";
 import type { Event } from "serverless";
 
 const teamServiceHealthCheck = async (
     _event: APIGatewayProxyEventV2,
 ): Promise<APIGatewayProxyResultV2> => {
-    return {
-        statusCode: 200,
-        body: JSON.stringify({
-            message: "Team Service is healthy",
-            environment: process.env["ENVIRONMENT"] || "not set",
-        }),
-    };
+    return new APIResponse(HTTP_STATUS.OK, "Team Service is healthy").toJSON();
 };
 
 export const event: Event = {

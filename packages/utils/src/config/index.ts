@@ -1,1 +1,1 @@
-export * from "./serverless";
+export * from "./serverless.ts";

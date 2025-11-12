@@ -67,6 +67,7 @@ export default [
                     caughtErrors: "none",
                 },
             ],
+            "@typescript-eslint/no-explicit-any": "error",
         },
     },
     {

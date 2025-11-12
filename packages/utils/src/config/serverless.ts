@@ -2,9 +2,10 @@ import path from "path";
 import { pathToFileURL } from "url";
 
 import { sync as globSync } from "glob";
-import { Functions, Serverless } from "serverless/aws";
 
-import { slugify } from "../utils/slugify";
+import { slugify } from "../utils/slugify.ts";
+
+import type { Functions, Serverless } from "serverless/aws";
 
 interface ServerlessConfigOptions {
     /** The name of the service */

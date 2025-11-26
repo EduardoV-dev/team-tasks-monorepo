@@ -2,6 +2,8 @@ node_modules/
 dist/
 logs/
 .serverless/
+docker/
 
+pnpm-lock.yaml
 .env
 .env.*

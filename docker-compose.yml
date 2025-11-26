@@ -1,0 +1,23 @@
+services:
+    db:
+        image: postgres
+        container_name: team_tasks_db
+        environment:
+            - POSTGRES_USER=team
+            - POSTGRES_PASSWORD=securepassword123
+            - POSTGRES_DB=team_tasks
+            - PGDATA=/var/lib/postgresql/data/pgdata
+        volumes:
+            - db-data:/var/lib/postgresql/data/pgdata
+            - ./docker/postgres/initdb:/docker-entrypoint-initdb.d:ro
+        ports:
+            - "5432:5432"
+        healthcheck:
+            test: ["CMD-SHELL", "pg_isready -U team -d team_tasks"]
+            interval: 10s
+            timeout: 5s
+            retries: 5
+        restart: unless-stopped
+
+volumes:
+    db-data:

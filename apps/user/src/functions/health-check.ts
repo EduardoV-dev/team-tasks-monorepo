@@ -23,7 +23,7 @@ const healthCheck = async (): Promise<APIGatewayProxyResultV2> => {
             return error.toJSON();
         }
 
-        return new ApiSuccessResponse(HTTP_STATUS.OK, "Team service is healthy", data).toJSON();
+        return new ApiSuccessResponse(HTTP_STATUS.OK, "User service is healthy", data).toJSON();
     } catch (error) {
         logger.error("Unexpected error during health check", error);
 

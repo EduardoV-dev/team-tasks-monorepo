@@ -2,7 +2,7 @@ name: Code Verification
 
 on:
     pull_request:
-        branches: [Main, Develop]
+        branches: [Main, Development]
     push:
         branches:
             - "**"

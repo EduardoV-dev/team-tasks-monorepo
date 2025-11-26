@@ -2,7 +2,8 @@
     "compilerOptions": {
         "baseUrl": ".",
         "paths": {
-            "@team-tasks/utils": ["packages/utils/src/index.ts"]
+            "@team-tasks/utils": ["packages/utils/src/index.ts"],
+            "@team-tasks/sequelize-orm": ["packages/sequelize-orm/src/index.ts"]
         }
     }
 }

@@ -2,7 +2,6 @@
     "name": "team-tasks-monorepo",
     "version": "1.0.0",
     "description": "Monorepo for TeamTasks project",
-    "main": "index.js",
     "type": "module",
     "scripts": {
         "build:check": "tsc --noEmit",
@@ -11,7 +10,8 @@
         "lint:check": "eslint **/*.{js,mjs,ts}",
         "lint": "eslint **/*.{js,mjs,ts} --fix",
         "prepare": "node .husky/install.mjs",
-        "start:team": "cd apps/team && pnpm dev"
+        "start:team": "cd apps/team && pnpm dev",
+        "start:user": "cd apps/user && pnpm dev"
     },
     "keywords": [],
     "author": "Eduardo Varela",

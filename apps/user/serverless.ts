@@ -11,7 +11,7 @@ const __dirname = dirname(__filename);
 
 const configurationPromise = getServerlessConfig({
     directory: __dirname,
-    serviceName: "team-tasks-team-service",
+    serviceName: "team-tasks-user-service",
     httpPort: process.env["LOCAL_PORT"] || "7000",
     env: process.env,
     openApiDocs: { enable: true },

@@ -4,5 +4,7 @@ logs/
 .serverless/
 docker/
 
+pnpm-lock.yaml
+*.md
 .env
 .env.*
